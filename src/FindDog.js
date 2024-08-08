@@ -7,12 +7,11 @@ function FindDog({ dogs }) {
     const { name } = useParams();
 
     if (name) {
-        const currentDog = dogs.find(
-        dog => dog.name.toLowerCase() === name.toLowerCase()
-        );
+        const currentDog = dogs.find(dog => 
+            (dog.name.toLowerCase() === name.toLowerCase()
+        ));
         return <DogDetails dog={currentDog} />;
     }
-
     return null;
 }
 

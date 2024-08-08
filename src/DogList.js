@@ -5,13 +5,16 @@ function DogList ({dogs}) {
     return (
         <div>
             <h1>List of Dogs</h1>
-            <ul>
+            <div>
                 {dogs.map(dog => (
-                    <li>
-                        <Link key={dog.name} to={`/dogs/${dog.name.toLowerCase()}`}>{dog.name}</Link>
-                    </li>
+                    <div>
+                        <h3>
+                            <Link key={dog.name} to={`/dogs/${dog.name.toLowerCase()}`}>{dog.name}</Link>
+                        </h3>
+                        <img src={dog.src} alt={dog.name}/>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

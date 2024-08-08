@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Nav ({dogs}) {
-    // const params = useParams()
     const dogLinks = dogs.map(dog => (
         <NavLink 
         key={dog.name} 
